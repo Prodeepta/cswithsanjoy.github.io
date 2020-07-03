@@ -1,0 +1,2170 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Sriracha', cursive;
+}
+
+
+/*--------------------------------------------- Pageload Animation ------------------------------------------------*/
+
+.loading{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #343a40;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999999999999999;
+}
+
+.wrapper{
+    height: 200px;
+    width: 200px;
+    box-sizing: border-box;
+    border-radius: 50%;
+    border-top: 10px solid white;
+    position: relative;
+    animation: p1 2s linear infinite;
+/*    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);*/
+}
+.wrapper::before, .wrapper::after{
+    content: '';
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    left: 0;
+    top: -10px;
+    box-sizing: border-box;
+    border-radius: 50%;
+}
+
+.wrapper::before{
+    border-top: 10px solid #f1b805;
+    transform: rotate(120deg);
+}
+
+.wrapper::after{
+    border-top: 10px solid black;
+    transform: rotate(240deg);
+}
+
+.wrapper span{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    color: white;
+    text-align: center;
+    line-height: 200px;
+    animation: p2 2s linear infinite;
+}
+
+@keyframes p1{
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes p2{
+    to{
+        transform: rotate(-360deg);
+    }
+}
+/*--------------------------------------------- Pageload Animation END ------------------------------------------------*/
+
+
+/*--------------------------------------------- Scroll Bar ----------------------------------------------*/
+
+::-webkit-scrollbar{
+    width: 1.1vw;
+}
+::-webkit-scrollbar-track{
+    box-shadow: rgba(0 0 0 0.5);
+    border-radius: 0.8vw; 
+}
+::-webkit-scrollbar-thumb{
+    border-radius: 0.5vw;
+    background-color: #f1b805;
+}
+::-webkit-scrollbar-thumb:hover{
+    background-color: black;
+}
+
+/*--------------------------------------------- Scroll Bar End ----------------------------------------------*/
+
+
+/*---------------------------------------------carousel dark overlay effect------------------------------------------------*/
+
+/*.drk:after {
+    content:"";
+    display:block;
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    background:#000;
+    opacity:0.7;
+}*/
+
+/*-------------------------------------------carousel dark overlay effect END---------------------------------------------*/
+
+/*--------------------------------------------- HEADER ------------------------------------------------*/
+
+.head-f{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0)), url('../images/SG.png');
+    background-size: 100% 110%;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+
+/*--------------------------------------------------- NAVBAR ------------------------------------------------*/
+.navbar-brand{
+    text-shadow: -2px 4px 3px black;
+}
+
+.nav-link{
+    color: white;
+    letter-spacing: 0.1rem;
+    text-shadow: -2px 4px 3px black;
+}
+
+.nav-link:hover{
+    color: white;
+}
+.nav-item:hover{
+    background: black ;
+    color: #f1b805;
+    /*border-left: 2px solid #f1b805;*/
+    border-right: 2px solid #f1b805;
+    border-bottom: 2px solid #f1b805;
+    /*border: none;*/
+    /*3px solid white;*/
+    /*border-radius: 5px;*/
+    
+}
+.nav-link.active{
+    /*color: white;*/
+    border-right: 2px solid #f1b805;
+    border-bottom: 2px solid #f1b805;
+}
+/*--------------------------------------------------- NAVBAR END ------------------------------------------------*/
+
+
+
+
+
+
+
+
+/*--------------------------------------------- NAVBAR EFFECT ------------------------------------------------*/
+
+nav{    
+    transition: 0.5s; 
+}
+.black{
+    background: rgba(0,0,0,0.8); 
+    transition: 0.5s ease-in;
+    animation: scroll 0.6s 1;
+    border: none;
+}
+@keyframes scroll{
+    0%{transform: translatey(-50%);}
+    100%{transform: translatey(0%);}
+}
+
+/*--------------------------------------------- NAVBAR EFFECT END ------------------------------------------------*/
+
+/*--------------------------------------------- Hero text animation ------------------------------------------------*/
+.hero h1{
+    float: right;
+    padding-left: 12vw;
+    padding-right: 14vw;
+    padding-top: 5vh;
+    text-shadow: -2px 4px 3px black;
+    color: black;
+}
+.hero h2{
+    text-shadow: -2px 4px 3px white;
+    color: black;
+    padding-top: 30vh;
+    float: right;
+    padding-right: 8vw;
+}
+.typed-text{
+    font-weight: normal;
+    color: #ffffff;
+}
+
+.cursor{
+    display: inline-block;
+    width: 3px;
+    background-color: #ffffff;
+    margin-left: 0.1rem;
+    animation: blink 1s infinite;
+}
+.cursor.typing{
+    animation: none;
+}
+
+@keyframes blink{
+    0% { background-color: #ffffff; }
+    49% { background-color: #ffffff; }
+    50% { background-color: transparent; }
+    99% { background-color: transparent; }
+    100% { background-color: #ffffff; }
+} 
+
+.button{
+    margin-top: 60vh;
+    margin-left: 32vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hero .btn{
+    background: transparent;
+    border:0.2rem solid black;
+    border-radius: 2rem;
+    padding: 0.7vh 2vw;
+    font-size: 25px;
+    box-shadow: -2px 6px 3px black;
+}
+.button a{
+    text-decoration: none;
+    color: black;
+}
+.hero .btn:hover{
+    background: black;
+    border:0.2rem solid white;
+    color: #f1b805;
+    box-shadow: -2px 6px 4px black;
+}
+/*--------------------------------------------- Hero text animation END ------------------------------------------------*/
+
+
+/*--------------------------------------------- HEADER END -------------------------------------------------------*/
+
+
+/*--------------------------------------------------- ABOUT ------------------------------------------------------*/
+
+
+.about{
+    width: 100%;
+    height: 90vh;
+    background-image: url('../images/kelli.jpg');
+    background-size: 100% 110%;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+.about h1{
+    letter-spacing: 0.15rem;
+    text-shadow: -3px 4px 3px black;
+}
+
+/*--------------------------------------------------- ABOUT END ------------------------------------------------------*/
+
+/*--------------------------------------------------- Study ------------------------------------------------------*/
+
+.study h1{
+    letter-spacing: 0.15rem;
+    text-shadow: -3px 4px 3px black;
+}
+.card{
+    box-shadow: -1px 5px 5px #c0c0c0;
+}
+.card-body{
+    box-shadow: -1px 5px 5px #c0c0c0;
+}
+/*--------------------------------------------------- study END ------------------------------------------------------*/
+
+
+/*--------------------------------------------------- LETTER ------------------------------------------------------*/
+
+.letter{
+    width: 100%;
+    height: 115vh;
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('../images/setup1.jpg');
+    background-size: 100% 110%;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+
+.letter-c{
+    width: 100%;
+    height: 100vh;
+    background-image: url('../images/joanna.jpg');
+    background-size: 100% 120%;
+/*    background-attachment: fixed;*/
+    overflow: hidden;
+}
+.letter h1{
+    text-shadow: -3px 4px 3px white;
+}
+/*--------------------------------------------------- LETTER END ------------------------------------------------------*/
+
+/*-------------------------------------------------------quotes------------------------------------------------------*/
+
+.quotes{
+    width: 100%;
+    height: 70vh;
+    /*background: #c0c0c0;*/
+    background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.6)), url('../images/qb.jpg');
+    background-size: 100% 180%;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*filter: blur(2px);*/
+}
+
+/*----------------------------------------------------------quotes END-----------------------------------------------*/
+
+/*--------------------------------------------------- CONTACT ------------------------------------------------------*/
+
+
+.contact{
+    width: 100%;
+    height: 90vh;
+    background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.6)), url('../images/contact-bg.png');
+    background-size: 100% 120%;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+.contact h1{
+    letter-spacing: 0.15rem;
+    text-shadow: -3px 4px 3px black;
+}
+.contact-c{
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 0.15rem;
+    /*text-shadow: -1px 2px 2px black;*/
+}
+.contact-form{
+    height: 52.5vh;
+}
+.info-box{
+    height: 22.5vh;
+}
+.info-box p{
+    font-size: 25px;
+}
+/*--------------------------------------------------- CONTACT END ------------------------------------------------------*/
+
+/*----------------------------------------------- Footer END-----------------------------------------------*/
+footer{
+        height: 30vh;
+}
+footer h1{
+    font-size: 50px;
+    letter-spacing: 3px;
+    /*font-family: 'Architects Daughter', cursive;*/
+    text-shadow: -2px 5px 3px black;
+    padding-top: 3vh;
+}
+footer p{
+    font-size: 15px;
+}
+footer .container{
+    height: 10vh;
+}
+.social-links{
+    display: flex;
+    justify-content: center;
+}
+footer .fa{
+    margin: 5px 10px;
+    color: #c0c0c0;
+}
+footer .fa-facebook:hover{
+    color: #3b5999;
+}
+footer .fa-instagram:hover{
+    color: #e4405f;
+}
+/*footer .fa-twitter:hover{
+    color: #55acee;
+}
+footer .fa-google-plus:hover{
+    color: #dd4b39;
+}
+footer .fa-linkedin:hover{
+    color: #0077B5;
+}*/
+/*----------------------------------------------- Footer END-----------------------------------------------*/
+
+
+/*------------------------------------------- Scroll To Top -----------------------------------------------*/
+
+#myBtn {
+  display: none;   
+  position: fixed; 
+  bottom: 1vh; 
+  right: 1vw; 
+  z-index: 999; 
+  border: none; 
+  outline: none; 
+  background-color:  #f1b805;
+  color: black; 
+  cursor: pointer; 
+  padding: 5px 12px;  
+  border-radius: 10px;
+  font-size: 18px; 
+}
+
+#myBtn:hover {
+    color: #f1b805;
+  background-color: black; 
+}
+
+
+/*------------------------------------------- Scroll To Top End -----------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*########################################### RESPONSIVE ########################################################*/
+
+
+@media screen and (max-width: 320px){
+
+    /*--------------------------------------------- HEADER ------------------------------------------------*/
+
+.head-f{
+    width: 100%;
+    height: 94vh;
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0)), url('../images/pb.jpg');
+    background-size: 100% 100vh;
+    /*background-repeat: no-repeat;*/
+    background-attachment: fixed;
+    overflow: hidden;
+}
+
+/*--------------------------------------------------- NAVBAR ------------------------------------------------*/
+
+.navbar-toggler{
+    font-size: 15px;
+}
+
+/*--------------------------------------------------- NAVBAR END ------------------------------------------------*/
+
+
+
+/*--------------------------------------------- Hero text animation ------------------------------------------------*/
+.hero h1{
+    font-size: 17px;
+    padding-left: 12vw;
+    padding-right: 8vw;
+    padding-top: 1vh;
+    text-shadow: -2px 2px 4px black;
+}
+.hero h2{
+	text-shadow: -2px 4px 3px white;
+	color: black;
+	letter-spacing: 1px;
+    font-size: 24px;
+    padding-top: 46vh;
+    padding-right: 8vw;
+    padding-left: 12vw;
+}
+
+.button{
+    margin-top: 68vh;
+    margin-left: 1vw;
+    margin-bottom: 5.7vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hero .btn{
+    padding: 0.7vh 3vw;
+    font-size: 15px;
+}
+
+
+/*--------------------------------------------- Hero text animation END ------------------------------------------------*/
+
+
+/*--------------------------------------------- HEADER END -------------------------------------------------------*/
+
+
+/*--------------------------------------------------- ABOUT ------------------------------------------------------*/
+
+
+.about{
+    width: 100%;
+    height: 170vh;
+    background-image: url('../images/ab.jpg');
+    background-size: 100% 110%;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+.about h1{
+    font-size: 30px;
+    letter-spacing: 0.15rem;
+    text-shadow: -3px 4px 3px white;
+}
+.about h2{
+    padding-top: 2vh;
+    font-size: 25px;
+    text-shadow: -3px 4px 3px white;
+}
+/*--------------------------------------------------- ABOUT END ------------------------------------------------------*/
+
+/*--------------------------------------------------- Study ------------------------------------------------------*/
+
+.study h1{
+    font-size: 30px;
+ /*   letter-spacing: 0.15rem;
+    text-shadow: -3px 4px 3px black;*/
+}
+.card{
+    box-shadow: -1px 5px 5px #c0c0c0;
+}
+.card-body{
+    box-shadow: -1px 5px 5px #c0c0c0;
+}
+/*--------------------------------------------------- study END ------------------------------------------------------*/
+
+
+/*--------------------------------------------------- LETTER ------------------------------------------------------*/
+
+.letter{
+    width: 100%;
+    height: 115vh;
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('../images/setup1.jpg');
+    background-size: 100% 110%;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+
+.letter-c{
+    width: 100%;
+    height: 100vh;
+    background-image: url('../images/ts.png');
+    background-size: 100% 120%;
+/*    background-attachment: fixed;*/
+    overflow: hidden;
+}
+.letter h1{
+    font-size: 30px;
+    /*text-shadow: -3px 4px 3px white;*/
+}
+/*--------------------------------------------------- LETTER END ------------------------------------------------------*/
+
+/*-------------------------------------------------------quotes------------------------------------------------------*/
+
+.quotes{
+    width: 100%;
+    height: 20vh;
+    /*background: #c0c0c0;*/
+    background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.6)), url('../images/qb.jpg');
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*filter: blur(2px);*/
+}
+
+/*----------------------------------------------------------quotes END-----------------------------------------------*/
+
+/*--------------------------------------------------- CONTACT ------------------------------------------------------*/
+
+
+.contact{
+    width: 100%;
+    height: 165vh;
+/*    background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.6)), url('../images/contact-bg.png');
+    background-size: 100% 120%;
+    background-attachment: fixed;
+    overflow: hidden;*/
+}
+.contact h1{
+    font-size: 30px;
+/*    letter-spacing: 0.15rem;
+    text-shadow: -3px 4px 3px black;*/
+}
+.contact-c{
+    font-size: 15px;
+/*    font-weight: bold;
+    letter-spacing: 0.15rem;*/
+    /*text-shadow: -1px 2px 2px black;*/
+}
+.contact-form{
+    margin-top: 6vh;
+    height: 58vh;
+}
+.info-box{
+    height: 27vh;
+}
+.info-box p{
+    font-size: 20px;
+}
+/*--------------------------------------------------- CONTACT END ------------------------------------------------------*/
+
+/*----------------------------------------------- Footer END-----------------------------------------------*/
+footer{
+        height: 37vh;
+}
+footer h1{
+    font-size: 30px;
+    letter-spacing: 3px;
+    /*font-family: 'Architects Daughter', cursive;*/
+    text-shadow: -2px 5px 3px black;
+    padding-top: 3vh;
+}
+footer p{
+    font-size: 15px;
+}
+/*footer .container{
+    height: 10vh;
+}
+.social-links{
+    display: flex;
+    justify-content: center;
+}
+footer .fa{
+    margin: 5px 10px;
+    color: #c0c0c0;
+}
+footer .fa-facebook:hover{
+    color: #3b5999;
+}
+footer .fa-instagram:hover{
+    color: #e4405f;
+}*/
+/*footer .fa-twitter:hover{
+    color: #55acee;
+}
+footer .fa-google-plus:hover{
+    color: #dd4b39;
+}
+footer .fa-linkedin:hover{
+    color: #0077B5;
+}*/
+/*----------------------------------------------- Footer END-----------------------------------------------*/
+
+
+/*------------------------------------------- Scroll To Top -----------------------------------------------*/
+
+#myBtn {
+  display: none;   
+  position: fixed; 
+  bottom: 1vh; 
+  right: 2vw; 
+  z-index: 999; 
+  border: 1px solid black; 
+  outline: none; 
+  background-color:  #f1b805;
+  color: black; 
+  cursor: pointer; 
+  padding: 5px 12px;  
+  border-radius: 10px;
+  font-size: 11px; 
+}
+
+/*#myBtn:hover {
+    color: #f1b805;
+  background-color: black; 
+}*/
+
+
+/*------------------------------------------- Scroll To Top End -----------------------------------------------*/
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 321px) and (max-width: 375px) {
+
+
+
+    /*--------------------------------------------- HEADER ------------------------------------------------*/
+
+.head-f{
+    width: 100%;
+    height: 94.3vh;
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0)), url('../images/pb.jpg');
+    background-size: 100% 110vh;
+    /*background-repeat: no-repeat;*/
+    background-attachment: fixed;
+    overflow: hidden;
+}
+
+/*--------------------------------------------------- NAVBAR ------------------------------------------------*/
+
+.navbar-toggler{
+    font-size: 15px;
+}
+
+/*--------------------------------------------------- NAVBAR END ------------------------------------------------*/
+
+
+
+/*--------------------------------------------- Hero text animation ------------------------------------------------*/
+.hero h1{
+    font-size: 20px;
+    padding-left: 10vw;
+    padding-right: 9vw;
+    padding-top: 1vh;
+}
+.hero h2{
+    font-size: 25px;
+    padding-top: 47vh;
+    padding-right: 7vw;
+    padding-left: 8vw;
+}
+
+.button{
+    margin-top: 62vh;
+    margin-left: 1vw;
+    margin-bottom: 20vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hero .btn{
+    padding: 0.7vh 3vw;
+    font-size: 15px;
+}
+
+
+/*--------------------------------------------- Hero text animation END ------------------------------------------------*/
+
+
+/*--------------------------------------------- HEADER END -------------------------------------------------------*/
+
+
+/*--------------------------------------------------- ABOUT ------------------------------------------------------*/
+
+
+.about{
+    width: 100%;
+    height: 145vh;
+    background-image: url('../images/ab.jpg');
+    background-size: 100% 110%;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+.about h1{
+    font-size: 30px;
+    letter-spacing: 0.15rem;
+    text-shadow: -3px 4px 3px white;
+}
+.about h2{
+    padding-top: 2vh;
+    font-size: 25px;
+    text-shadow: -3px 4px 3px white;
+}
+/*--------------------------------------------------- ABOUT END ------------------------------------------------------*/
+
+/*--------------------------------------------------- Study ------------------------------------------------------*/
+
+.study h1{
+    font-size: 30px;
+    /*letter-spacing: 0.15rem;*/
+    text-shadow: -1px 4px 3px black;
+}
+.card{
+    box-shadow: -1px 5px 5px #c0c0c0;
+}
+.card-body{
+    box-shadow: -1px 5px 5px #c0c0c0;
+}
+/*--------------------------------------------------- study END ------------------------------------------------------*/
+
+
+/*--------------------------------------------------- LETTER ------------------------------------------------------*/
+
+.letter{
+    width: 100%;
+    height: 115vh;
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('../images/setup1.jpg');
+    background-size: 100% 110%;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+
+.letter-c{
+    width: 100%;
+    height: 100vh;
+    background-image: url('../images/ts.png');
+    background-size: 100% 120%;
+/*    background-attachment: fixed;*/
+    overflow: hidden;
+}
+.letter h1{
+    font-size: 25px;
+    /*text-shadow: -3px 4px 3px white;*/
+}
+/*--------------------------------------------------- LETTER END ------------------------------------------------------*/
+
+/*-------------------------------------------------------quotes------------------------------------------------------*/
+
+.quotes{
+    width: 100%;
+    height: 20vh;
+    /*background: #c0c0c0;*/
+    background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.6)), url('../images/qb.jpg');
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*filter: blur(2px);*/
+}
+
+/*----------------------------------------------------------quotes END-----------------------------------------------*/
+
+/*--------------------------------------------------- CONTACT ------------------------------------------------------*/
+
+
+.contact{
+    width: 100%;
+    height: 165vh;
+/*    background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.6)), url('../images/contact-bg.png');
+    background-size: 100% 120%;
+    background-attachment: fixed;
+    overflow: hidden;*/
+}
+.contact h1{
+    font-size: 30px;
+    /*letter-spacing: 0.15rem;*/
+    text-shadow: -1px 4px 3px black;
+}
+.contact-c{
+    font-size: 15px;
+/*    font-weight: bold;
+    letter-spacing: 0.15rem;*/
+    /*text-shadow: -1px 2px 2px black;*/
+}
+.contact-form{
+    margin-top: 6vh;
+    height: 58vh;
+}
+.info-box{
+    height: 27vh;
+}
+.info-box p{
+    font-size: 20px;
+}
+/*--------------------------------------------------- CONTACT END ------------------------------------------------------*/
+
+/*----------------------------------------------- Footer END-----------------------------------------------*/
+footer{
+        height: 34vh;
+}
+footer h1{
+    font-size: 30px;
+    letter-spacing: 3px;
+    /*font-family: 'Architects Daughter', cursive;*/
+    text-shadow: -2px 5px 3px black;
+    padding-top: 3vh;
+}
+footer p{
+    font-size: 15px;
+}
+/*footer .container{
+    height: 10vh;
+}
+.social-links{
+    display: flex;
+    justify-content: center;
+}
+footer .fa{
+    margin: 5px 10px;
+    color: #c0c0c0;
+}
+footer .fa-facebook:hover{
+    color: #3b5999;
+}
+footer .fa-instagram:hover{
+    color: #e4405f;
+}*/
+/*footer .fa-twitter:hover{
+    color: #55acee;
+}
+footer .fa-google-plus:hover{
+    color: #dd4b39;
+}
+footer .fa-linkedin:hover{
+    color: #0077B5;
+}*/
+/*----------------------------------------------- Footer END-----------------------------------------------*/
+
+
+/*------------------------------------------- Scroll To Top -----------------------------------------------*/
+
+#myBtn {
+  display: none;   
+  position: fixed; 
+  bottom: 1vh; 
+  right: 2vw; 
+  z-index: 999; 
+  /*border: 1px solid black; */
+  outline: none; 
+  background-color:  #f1b805;
+  color: black; 
+  cursor: pointer; 
+  padding: 5px 12px;  
+  border-radius: 10px;
+  font-size: 11px; 
+}
+
+/*#myBtn:hover {
+    color: #f1b805;
+  background-color: black; 
+}*/
+
+
+/*------------------------------------------- Scroll To Top End -----------------------------------------------*/
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 376px) and (max-width: 425px) {
+
+
+        /*--------------------------------------------- HEADER ------------------------------------------------*/
+
+.head-f{
+    width: 100%;
+    height: 94.3vh;
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0)), url('../images/pb.jpg');
+    background-size: 100% 110vh;
+    /*background-repeat: no-repeat;*/
+    background-attachment: fixed;
+    overflow: hidden;
+}
+
+/*--------------------------------------------------- NAVBAR ------------------------------------------------*/
+
+.navbar-toggler{
+    font-size: 15px;
+}
+
+/*--------------------------------------------------- NAVBAR END ------------------------------------------------*/
+
+
+
+/*--------------------------------------------- Hero text animation ------------------------------------------------*/
+.hero h1{
+    font-size: 20px;
+    padding-left: 10vw;
+    padding-right: 9vw;
+    padding-top: 1vh;
+}
+.hero h2{
+    font-size: 27px;
+    padding-top: 54.5vh;
+    padding-right: 7vw;
+    padding-left: 8vw;
+    color: white;
+    text-shadow: -3px 6px 3px black;
+}
+
+.button{
+    margin-top: 70vh;
+    margin-left: 1vw;
+    margin-bottom: 7vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hero .btn{
+    padding: 0.7vh 5vw;
+    font-size: 15px;
+}
+
+
+/*--------------------------------------------- Hero text animation END ------------------------------------------------*/
+
+
+/*--------------------------------------------- HEADER END -------------------------------------------------------*/
+
+
+/*--------------------------------------------------- ABOUT ------------------------------------------------------*/
+
+
+.about{
+    width: 100%;
+    height: 145vh;
+    background-image: url('../images/ab.jpg');
+    background-size: 100% 110%;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+.about h1{
+    font-size: 30px;
+    letter-spacing: 0.15rem;
+    text-shadow: -3px 4px 3px white;
+}
+.about h2{
+    padding-top: 2vh;
+    font-size: 25px;
+    text-shadow: -3px 4px 3px white;
+}
+/*--------------------------------------------------- ABOUT END ------------------------------------------------------*/
+
+/*--------------------------------------------------- Study ------------------------------------------------------*/
+
+.study h1{
+    font-size: 30px;
+    /*letter-spacing: 0.15rem;*/
+    text-shadow: -1px 2px 3px black;
+}
+.card{
+    box-shadow: -1px 5px 5px #c0c0c0;
+}
+.card-body{
+    box-shadow: -1px 5px 5px #c0c0c0;
+}
+/*--------------------------------------------------- study END ------------------------------------------------------*/
+
+
+/*--------------------------------------------------- LETTER ------------------------------------------------------*/
+
+.letter{
+    width: 100%;
+    height: 115vh;
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('../images/setup1.jpg');
+    background-size: 100% 110%;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+
+.letter-c{
+    width: 100%;
+    height: 100vh;
+    background-image: url('../images/ts.png');
+    background-size: 100% 120%;
+/*    background-attachment: fixed;*/
+    overflow: hidden;
+}
+.letter h1{
+    font-size: 25px;
+    /*text-shadow: -3px 4px 3px white;*/
+}
+/*--------------------------------------------------- LETTER END ------------------------------------------------------*/
+
+/*-------------------------------------------------------quotes------------------------------------------------------*/
+
+.quotes{
+    width: 100%;
+    height: 20vh;
+    /*background: #c0c0c0;*/
+    background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.6)), url('../images/qb.jpg');
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*filter: blur(2px);*/
+}
+
+/*----------------------------------------------------------quotes END-----------------------------------------------*/
+
+/*--------------------------------------------------- CONTACT ------------------------------------------------------*/
+
+
+.contact{
+    width: 100%;
+    height: 165vh;
+/*    background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.6)), url('../images/contact-bg.png');
+    background-size: 100% 120%;
+    background-attachment: fixed;
+    overflow: hidden;*/
+}
+.contact h1{
+    font-size: 30px;
+    /*letter-spacing: 0.15rem;*/
+    text-shadow: -1px 4px 3px black;
+}
+.contact-c{
+    font-size: 15px;
+/*    font-weight: bold;
+    letter-spacing: 0.15rem;*/
+    /*text-shadow: -1px 2px 2px black;*/
+}
+.contact-form{
+    margin-top: 6vh;
+    height: 58vh;
+}
+.info-box{
+    height: 27vh;
+}
+.info-box p{
+    font-size: 20px;
+}
+/*--------------------------------------------------- CONTACT END ------------------------------------------------------*/
+
+/*----------------------------------------------- Footer END-----------------------------------------------*/
+footer{
+        height: 34vh;
+}
+footer h1{
+    font-size: 30px;
+    letter-spacing: 3px;
+    /*font-family: 'Architects Daughter', cursive;*/
+    text-shadow: -2px 5px 3px black;
+    padding-top: 3vh;
+}
+footer p{
+    font-size: 15px;
+}
+/*footer .container{
+    height: 10vh;
+}
+.social-links{
+    display: flex;
+    justify-content: center;
+}
+footer .fa{
+    margin: 5px 10px;
+    color: #c0c0c0;
+}
+footer .fa-facebook:hover{
+    color: #3b5999;
+}
+footer .fa-instagram:hover{
+    color: #e4405f;
+}*/
+/*footer .fa-twitter:hover{
+    color: #55acee;
+}
+footer .fa-google-plus:hover{
+    color: #dd4b39;
+}
+footer .fa-linkedin:hover{
+    color: #0077B5;
+}*/
+/*----------------------------------------------- Footer END-----------------------------------------------*/
+
+
+/*------------------------------------------- Scroll To Top -----------------------------------------------*/
+
+#myBtn {
+  display: none;   
+  position: fixed; 
+  bottom: 1vh; 
+  right: 2vw; 
+  z-index: 999; 
+  /*border: 1px solid black; */
+  outline: none; 
+  background-color:  #f1b805;
+  color: black; 
+  cursor: pointer; 
+  padding: 5px 12px;  
+  border-radius: 10px;
+  font-size: 11px; 
+}
+
+/*#myBtn:hover {
+    color: #f1b805;
+  background-color: black; 
+}*/
+
+
+/*------------------------------------------- Scroll To Top End -----------------------------------------------*/
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 426px) and (max-width: 645px) {
+
+        /*--------------------------------------------- HEADER ------------------------------------------------*/
+
+.head-f{
+    width: 100%;
+    height: 97vh;
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0)), url('../images/pb.jpg');
+    background-size: 100% 120vh;
+    /*background-repeat: no-repeat;*/
+    background-attachment: fixed;
+    overflow: hidden;
+}
+
+/*--------------------------------------------------- NAVBAR ------------------------------------------------*/
+
+.navbar-toggler{
+    font-size: 15px;
+}
+
+/*--------------------------------------------------- NAVBAR END ------------------------------------------------*/
+
+
+
+/*--------------------------------------------- Hero text animation ------------------------------------------------*/
+.hero h1{
+    font-size: 20px;
+    padding-left: 8vw;
+    padding-right: 14vw;
+    padding-top: 1vh;
+    color: white;
+}
+.hero h2{
+    font-size: 27px;
+    padding-top: 51vh;
+    padding-right: 7vw;
+    padding-left: 8vw;
+    letter-spacing: 1.5px;
+    color: white;
+    text-shadow: -3px 6px 3px black;
+}
+
+.button{
+    margin-top: 70vh;
+    margin-left: 1vw;
+    margin-bottom: 5.2vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hero .btn{
+    padding: 0.7vh 5vw;
+    font-size: 15px;
+}
+
+
+/*--------------------------------------------- Hero text animation END ------------------------------------------------*/
+
+
+/*--------------------------------------------- HEADER END -------------------------------------------------------*/
+
+
+/*--------------------------------------------------- ABOUT ------------------------------------------------------*/
+
+
+.about{
+    width: 100%;
+    height: 145vh;
+    background-image: url('../images/ab.jpg');
+    background-size: 100% 110%;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+.about h1{
+    font-size: 30px;
+    letter-spacing: 0.15rem;
+    text-shadow: -3px 4px 3px white;
+}
+.about h2{
+    padding-top: 2vh;
+    font-size: 25px;
+    text-shadow: -3px 4px 3px white;
+}
+/*--------------------------------------------------- ABOUT END ------------------------------------------------------*/
+
+/*--------------------------------------------------- Study ------------------------------------------------------*/
+
+.study h1{
+    font-size: 30px;
+    /*letter-spacing: 0.15rem;*/
+    text-shadow: -1px 2px 3px black;
+}
+.card{
+    box-shadow: -1px 5px 5px #c0c0c0;
+}
+.card-body{
+    box-shadow: -1px 5px 5px #c0c0c0;
+}
+/*--------------------------------------------------- study END ------------------------------------------------------*/
+
+
+/*--------------------------------------------------- LETTER ------------------------------------------------------*/
+
+.letter{
+    width: 100%;
+    height: 115vh;
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('../images/setup1.jpg');
+    background-size: 100% 110%;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+
+.letter-c{
+    width: 100%;
+    height: 100vh;
+    background-image: url('../images/ts.png');
+    background-size: 100% 120%;
+/*    background-attachment: fixed;*/
+    overflow: hidden;
+}
+.letter h1{
+    font-size: 25px;
+    /*text-shadow: -3px 4px 3px white;*/
+}
+/*--------------------------------------------------- LETTER END ------------------------------------------------------*/
+
+/*-------------------------------------------------------quotes------------------------------------------------------*/
+
+.quotes{
+    width: 100%;
+    height: 40vh;
+    /*background: #c0c0c0;*/
+    background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.6)), url('../images/qb.jpg');
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*filter: blur(2px);*/
+}
+
+/*----------------------------------------------------------quotes END-----------------------------------------------*/
+
+/*--------------------------------------------------- CONTACT ------------------------------------------------------*/
+
+
+.contact{
+    width: 100%;
+    height: 165vh;
+/*    background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.6)), url('../images/contact-bg.png');
+    background-size: 100% 120%;
+    background-attachment: fixed;
+    overflow: hidden;*/
+}
+.contact h1{
+    font-size: 30px;
+    /*letter-spacing: 0.15rem;*/
+    text-shadow: -1px 4px 3px black;
+}
+.contact-c{
+    font-size: 15px;
+/*    font-weight: bold;
+    letter-spacing: 0.15rem;*/
+    /*text-shadow: -1px 2px 2px black;*/
+}
+.contact-form{
+    margin-top: 6vh;
+    height: 58vh;
+}
+.info-box{
+    height: 27vh;
+}
+.info-box p{
+    font-size: 20px;
+}
+/*--------------------------------------------------- CONTACT END ------------------------------------------------------*/
+
+/*----------------------------------------------- Footer END-----------------------------------------------*/
+footer{
+        height: 34vh;
+}
+footer h1{
+    font-size: 30px;
+    letter-spacing: 3px;
+    /*font-family: 'Architects Daughter', cursive;*/
+    text-shadow: -2px 5px 3px black;
+    padding-top: 3vh;
+}
+footer p{
+    font-size: 15px;
+}
+/*footer .container{
+    height: 10vh;
+}
+.social-links{
+    display: flex;
+    justify-content: center;
+}
+footer .fa{
+    margin: 5px 10px;
+    color: #c0c0c0;
+}
+footer .fa-facebook:hover{
+    color: #3b5999;
+}
+footer .fa-instagram:hover{
+    color: #e4405f;
+}*/
+/*footer .fa-twitter:hover{
+    color: #55acee;
+}
+footer .fa-google-plus:hover{
+    color: #dd4b39;
+}
+footer .fa-linkedin:hover{
+    color: #0077B5;
+}*/
+/*----------------------------------------------- Footer END-----------------------------------------------*/
+
+
+/*------------------------------------------- Scroll To Top -----------------------------------------------*/
+
+#myBtn {
+  display: none;   
+  position: fixed; 
+  bottom: 1vh; 
+  right: 2vw; 
+  z-index: 999; 
+  /*border: 1px solid black; */
+  outline: none; 
+  background-color:  #f1b805;
+  color: black; 
+  cursor: pointer; 
+  padding: 5px 12px;  
+  border-radius: 10px;
+  font-size: 11px; 
+}
+
+/*#myBtn:hover {
+    color: #f1b805;
+  background-color: black; 
+}*/
+
+
+/*------------------------------------------- Scroll To Top End -----------------------------------------------*/
+
+    
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 646px) and (max-width: 768px) {
+
+    /*--------------------------------------------- HEADER ------------------------------------------------*/
+
+.head-f{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0)), url('../images/SG.png');
+    background-size: 140% 110%;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+
+/*--------------------------------------------------- NAVBAR ------------------------------------------------*/
+.navbar-brand{
+    text-shadow: -2px 4px 3px black;
+}
+
+.nav-link{
+    color: white;
+    letter-spacing: 0.1rem;
+    text-shadow: -2px 4px 3px black;
+    font-size: 13px;
+}
+
+/*--------------------------------------------------- NAVBAR END ------------------------------------------------*/
+
+
+
+
+
+
+
+
+/*--------------------------------------------- NAVBAR EFFECT ------------------------------------------------*/
+
+nav{    
+    transition: 0.5s; 
+}
+.black{
+    background: rgba(0,0,0,0.8); 
+    transition: 0.5s ease-in;
+    animation: scroll 0.6s 1;
+    border: none;
+}
+@keyframes scroll{
+    0%{transform: translatey(-50%);}
+    100%{transform: translatey(0%);}
+}
+
+/*--------------------------------------------- NAVBAR EFFECT END ------------------------------------------------*/
+
+/*--------------------------------------------- Hero text animation ------------------------------------------------*/
+.hero h1{
+    float: right;
+    padding-left: 35vw;
+    padding-right: 3vw;
+    padding-top: 5vh;
+    text-shadow: -2px 4px 3px black;
+    color: black;
+    font-size: 25px;
+}
+.hero h2{
+    text-shadow: -2px 4px 3px white;
+    color: black;
+    padding-top: 35vh;
+    float: right;
+    padding-right: 1vw;
+    font-size: 32px;
+}
+
+
+.button{
+    margin-top: 55vh;
+    margin-left: 46vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hero .btn{
+    background: transparent;
+    border:0.2rem solid black;
+    border-radius: 2rem;
+    padding: 0.7vh 2vw;
+    font-size: 18px;
+    box-shadow: -2px 6px 3px black;
+    margin-bottom: 18vh;
+}
+/*--------------------------------------------- Hero text animation END ------------------------------------------------*/
+
+
+/*--------------------------------------------- HEADER END -------------------------------------------------------*/
+
+
+/*--------------------------------------------------- ABOUT ------------------------------------------------------*/
+
+
+.about{
+    width: 100%;
+    height: 130vh;
+    background-image: url('../images/ab.jpg');
+    background-size: 100% 110%;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+.about h1{
+    letter-spacing: 0.15rem;
+    text-shadow: -3px 4px 3px black;
+}
+
+/*--------------------------------------------------- ABOUT END ------------------------------------------------------*/
+
+/*--------------------------------------------------- Study ------------------------------------------------------*/
+
+.study h1{
+    letter-spacing: 0.15rem;
+    text-shadow: -3px 4px 3px black;
+}
+.card{
+    box-shadow: -1px 5px 5px #c0c0c0;
+}
+.card-body{
+    box-shadow: -1px 5px 5px #c0c0c0;
+}
+/*--------------------------------------------------- study END ------------------------------------------------------*/
+
+
+/*--------------------------------------------------- LETTER ------------------------------------------------------*/
+
+.letter{
+    width: 100%;
+    height: 115vh;
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('../images/setup1.jpg');
+    background-size: 100% 110%;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+
+.letter-c{
+    width: 100%;
+    height: 100vh;
+    background-image: url('../images/joanna.jpg');
+    background-size: 100% 120%;
+/*    background-attachment: fixed;*/
+    overflow: hidden;
+}
+.letter h1{
+    text-shadow: -3px 4px 3px white;
+}
+/*--------------------------------------------------- LETTER END ------------------------------------------------------*/
+
+/*-------------------------------------------------------quotes------------------------------------------------------*/
+
+.quotes{
+    width: 100%;
+    height: 70vh;
+    /*background: #c0c0c0;*/
+    background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.6)), url('../images/qb.jpg');
+    background-size: 100% 180%;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*filter: blur(2px);*/
+}
+
+/*----------------------------------------------------------quotes END-----------------------------------------------*/
+
+/*--------------------------------------------------- CONTACT ------------------------------------------------------*/
+
+
+.contact{
+    width: 100%;
+    height: 160vh;
+    background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.6)), url('../images/contact-bg.png');
+    background-size: 100% 120%;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+.contact h1{
+    letter-spacing: 0.15rem;
+    text-shadow: -3px 4px 3px black;
+}
+.contact-c{
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 0.15rem;
+    /*text-shadow: -1px 2px 2px black;*/
+}
+.contact-form{
+    height: 55vh;
+    margin-top: 5vh;
+}
+.info-box{
+    height: 29vh;
+}
+.info-box p{
+    font-size: 25px;
+}
+/*--------------------------------------------------- CONTACT END ------------------------------------------------------*/
+
+/*----------------------------------------------- Footer END-----------------------------------------------*/
+footer{
+        height: 33vh;
+}
+footer h1{
+    font-size: 50px;
+    letter-spacing: 3px;
+    /*font-family: 'Architects Daughter', cursive;*/
+    text-shadow: -2px 5px 3px black;
+    padding-top: 3vh;
+}
+footer p{
+    font-size: 15px;
+}
+footer .container{
+    height: 10vh;
+}
+.social-links{
+    display: flex;
+    justify-content: center;
+}
+footer .fa{
+    margin: 5px 10px;
+    color: #c0c0c0;
+}
+footer .fa-facebook:hover{
+    color: #3b5999;
+}
+footer .fa-instagram:hover{
+    color: #e4405f;
+}
+/*footer .fa-twitter:hover{
+    color: #55acee;
+}
+footer .fa-google-plus:hover{
+    color: #dd4b39;
+}
+footer .fa-linkedin:hover{
+    color: #0077B5;
+}*/
+/*----------------------------------------------- Footer END-----------------------------------------------*/
+
+
+/*------------------------------------------- Scroll To Top -----------------------------------------------*/
+
+#myBtn {
+  display: none;   
+  position: fixed; 
+  bottom: 1vh; 
+  right: 1vw; 
+  z-index: 999; 
+  border: none; 
+  outline: none; 
+  background-color:  #f1b805;
+  color: black; 
+  cursor: pointer; 
+  padding: 5px 12px;  
+  border-radius: 10px;
+  font-size: 18px; 
+}
+
+#myBtn:hover {
+    color: #f1b805;
+  background-color: black; 
+}
+
+
+/*------------------------------------------- Scroll To Top End -----------------------------------------------*/
+    
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+
+
+    /*--------------------------------------------- HEADER ------------------------------------------------*/
+
+.head-f{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0)), url('../images/SG.png');
+    background-size: 100% 110%;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+
+/*--------------------------------------------------- NAVBAR ------------------------------------------------*/
+.navbar-brand{
+    text-shadow: -2px 4px 3px black;
+}
+
+.nav-link{
+    color: white;
+    letter-spacing: 0.1rem;
+    text-shadow: -2px 4px 3px black;
+}
+
+.nav-link:hover{
+    color: white;
+}
+.nav-item:hover{
+    background: black ;
+    color: #f1b805;
+    /*border-left: 2px solid #f1b805;*/
+    border-right: 2px solid #f1b805;
+    border-bottom: 2px solid #f1b805;
+    /*border: none;*/
+    /*3px solid white;*/
+    /*border-radius: 5px;*/
+    
+}
+.nav-link.active{
+    /*color: white;*/
+    border-right: 2px solid #f1b805;
+    border-bottom: 2px solid #f1b805;
+}
+/*--------------------------------------------------- NAVBAR END ------------------------------------------------*/
+
+
+
+
+
+
+
+
+/*--------------------------------------------- NAVBAR EFFECT ------------------------------------------------*/
+
+nav{    
+    transition: 0.5s; 
+}
+.black{
+    background: rgba(0,0,0,0.8); 
+    transition: 0.5s ease-in;
+    animation: scroll 0.6s 1;
+    border: none;
+}
+@keyframes scroll{
+    0%{transform: translatey(-50%);}
+    100%{transform: translatey(0%);}
+}
+
+/*--------------------------------------------- NAVBAR EFFECT END ------------------------------------------------*/
+
+/*--------------------------------------------- Hero text animation ------------------------------------------------*/
+.hero h1{
+    float: right;
+    padding-left: 12vw;
+    padding-right: 14vw;
+    padding-top: 5vh;
+    text-shadow: -2px 4px 3px black;
+    color: black;
+    font-size: 35px;
+}
+.hero h2{
+    text-shadow: -2px 4px 3px white;
+    color: black;
+    padding-top: 30vh;
+    float: right;
+    padding-right: 6vw;
+    font-size: 45px;
+}
+
+
+.button{
+    margin-top: 60vh;
+    margin-left: 32vw;
+    margin-bottom: 2vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hero .btn{
+    background: transparent;
+    border:0.2rem solid black;
+    border-radius: 2rem;
+    padding: 0.7vh 2vw;
+    font-size: 25px;
+    box-shadow: -2px 6px 3px black;
+}
+.button a{
+    text-decoration: none;
+    color: black;
+}
+
+/*--------------------------------------------- Hero text animation END ------------------------------------------------*/
+
+
+/*--------------------------------------------- HEADER END -------------------------------------------------------*/
+
+
+/*--------------------------------------------------- ABOUT ------------------------------------------------------*/
+
+
+.about{
+    width: 100%;
+    height: 100vh;
+    background-image: url('../images/kelli.jpg');
+    background-size: 100% 110%;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+.about h1{
+    letter-spacing: 0.15rem;
+    text-shadow: -3px 4px 3px black;
+}
+
+/*--------------------------------------------------- ABOUT END ------------------------------------------------------*/
+
+/*--------------------------------------------------- Study ------------------------------------------------------*/
+
+.study h1{
+    letter-spacing: 0.15rem;
+    text-shadow: -3px 4px 3px black;
+}
+.card{
+    box-shadow: -1px 5px 5px #c0c0c0;
+}
+.card-body{
+    box-shadow: -1px 5px 5px #c0c0c0;
+}
+
+.card-body h3{
+    font-size: 20px;
+}
+
+.card button{
+    font-size: 13px;
+}
+
+
+/*--------------------------------------------------- study END ------------------------------------------------------*/
+
+
+/*--------------------------------------------------- LETTER ------------------------------------------------------*/
+
+.letter{
+    width: 100%;
+    height: 115vh;
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('../images/setup1.jpg');
+    background-size: 100% 110%;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+
+.letter-c{
+    width: 100%;
+    height: 100vh;
+    background-image: url('../images/joanna.jpg');
+    background-size: 100% 120%;
+/*    background-attachment: fixed;*/
+    overflow: hidden;
+}
+.letter h1{
+    text-shadow: -3px 4px 3px white;
+}
+/*--------------------------------------------------- LETTER END ------------------------------------------------------*/
+
+/*-------------------------------------------------------quotes------------------------------------------------------*/
+
+.quotes{
+    width: 100%;
+    height: 70vh;
+    /*background: #c0c0c0;*/
+    background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.6)), url('../images/qb.jpg');
+    background-size: 100% 180%;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*filter: blur(2px);*/
+}
+
+/*----------------------------------------------------------quotes END-----------------------------------------------*/
+
+/*--------------------------------------------------- CONTACT ------------------------------------------------------*/
+
+
+.contact{
+    width: 100%;
+    height: 90vh;
+    background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.6)), url('../images/contact-bg.png');
+    background-size: 100% 120%;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+.contact h1{
+    letter-spacing: 0.15rem;
+    text-shadow: -3px 4px 3px black;
+}
+.contact-c{
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 0.15rem;
+    /*text-shadow: -1px 2px 2px black;*/
+}
+.contact-form{
+    height: 52.5vh;
+}
+.info-box{
+    height: 22vh;
+}
+.info-box p{
+    font-size: 20px;
+}
+
+.contact button{
+    margin-top: 1vh;
+}
+
+
+/*--------------------------------------------------- CONTACT END ------------------------------------------------------*/
+
+/*----------------------------------------------- Footer END-----------------------------------------------*/
+footer{
+        height: 33vh;
+}
+footer h1{
+    font-size: 50px;
+    letter-spacing: 3px;
+    /*font-family: 'Architects Daughter', cursive;*/
+    text-shadow: -2px 5px 3px black;
+    padding-top: 3vh;
+}
+footer p{
+    font-size: 15px;
+}
+footer .container{
+    height: 10vh;
+}
+.social-links{
+    display: flex;
+    justify-content: center;
+}
+footer .fa{
+    margin: 5px 10px;
+    color: #c0c0c0;
+}
+footer .fa-facebook:hover{
+    color: #3b5999;
+}
+footer .fa-instagram:hover{
+    color: #e4405f;
+}
+/*footer .fa-twitter:hover{
+    color: #55acee;
+}
+footer .fa-google-plus:hover{
+    color: #dd4b39;
+}
+footer .fa-linkedin:hover{
+    color: #0077B5;
+}*/
+/*----------------------------------------------- Footer END-----------------------------------------------*/
+
+
+/*------------------------------------------- Scroll To Top -----------------------------------------------*/
+
+#myBtn {
+  display: none;   
+  position: fixed; 
+  bottom: 1vh; 
+  right: 1vw; 
+  z-index: 999; 
+  border: none; 
+  outline: none; 
+  background-color:  #f1b805;
+  color: black; 
+  cursor: pointer; 
+  padding: 5px 12px;  
+  border-radius: 10px;
+  font-size: 18px; 
+}
+
+#myBtn:hover {
+    color: #f1b805;
+  background-color: black; 
+}
+
+
+/*------------------------------------------- Scroll To Top End -----------------------------------------------*/
+
+
+
+}
